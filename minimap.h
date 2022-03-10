@@ -3,28 +3,9 @@
 
 typedef struct
 {
-    SDL_Rect src;
-    SDL_Rect dist;
-    SDL_Surface *img;
-}ennemi;
-typedef struct
-{
-    SDL_Rect src;
-    SDL_Rect dist;
-    SDL_Surface *img;
-}image;
-typedef struct
-{
-    SDL_Rect src;
-    SDL_Rect dist;
-    SDL_Surface *obs;
-}obstacle;
-typedef struct
-{
-    SDL_Rect src;
-    SDL_Rect dist;
-    SDL_Surface *img;
-}perso;
+  SDL_Surface *img[3];
+  SDL_Rect posJoueur[3];
+}minimap;
 void initminimap( minimap * m);
 void MAJMinimap(SDL_Rect posJoueur , minimap * m, SDL_Rect camera, int redimensionnement);
 void afficherminimap (minimap m, SDL_Surface * screen)
